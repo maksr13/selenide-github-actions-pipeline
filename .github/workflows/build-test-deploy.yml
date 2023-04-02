@@ -30,11 +30,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: |
-       (node node_modules/http-server/bin/http-server .)
-        sleep 5
-        pid=($lsof -t -i:8080)
-        echo "Server is running on PID: " $pid
+    - run: | 
+        nohup node_modules/http-server/bin/http-server . > /dev/null 2>&1
         sleep 5
     - run: cd ../../../tests/selenide
     - name: Set up JDK 11
