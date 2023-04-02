@@ -1,5 +1,5 @@
 Feature: Test
   
   Scenario: User should be able to open site
-    When I open web-site http://localhost:3000/index.html
-    Then I should see text Hello world on header
+    When I open web-site https://google.com
+    Then I should see text Gmail
