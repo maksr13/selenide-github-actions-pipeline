@@ -1,3 +1,5 @@
 node_modules/
 .idea/
 tests/selenide/seller_ui-selenide-test-suite.iml
+target
+tests/selenide/target
