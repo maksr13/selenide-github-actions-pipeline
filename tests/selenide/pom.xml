@@ -53,13 +53,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>strtotime-for-java</groupId>
-            <artifactId>strtotime-for-java</artifactId>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/com/wareninja/opensource/strtotime/strtotime-for-java-0.0.2.jar</systemPath>
-            <version>0.0.2</version>
-        </dependency>
-        <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>${version.rest.assured}</version>
