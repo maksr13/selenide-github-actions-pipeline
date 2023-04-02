@@ -16,8 +16,6 @@ public class CukesFeaturesRunnerTest {
 
     @BeforeClass
     public static void executeBeforeTests() {
-        Configuration.timeout = 12000;
-        Configuration.browserSize = "1600x900";
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--disable-dev-shm-usage");
         WebDriverManager.chromedriver().capabilities(chromeOptions).setup();
