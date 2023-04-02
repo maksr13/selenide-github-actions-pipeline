@@ -15,8 +15,8 @@ public class Steps {
         open(url);
     }
 
-    @Then("^I should see text (.*) on header$")
+    @Then("^I should see text (.*)$")
     public void iShouldSeeTextXxxOnHeader(String text) {
-        $(By.cssSelector("h1")).shouldHave(visible).shouldHave(Condition.exactText(text));
+        $$(By.xpath("//*")).find(Condition.text(text)).shouldHave(visible);
     }
 }

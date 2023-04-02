@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -15,9 +16,9 @@ public class CukesFeaturesRunnerTest {
 
     @BeforeClass
     public static void executeBeforeTests() {
-        Configuration.timeout = 12000;
-        Configuration.browserSize = "1600x900";
-        WebDriverManager.chromedriver().setup();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--disable-dev-shm-usage");
+        WebDriverManager.chromedriver().capabilities(chromeOptions).setup();
     }
 
     @AfterClass
