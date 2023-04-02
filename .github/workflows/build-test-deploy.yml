@@ -31,7 +31,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: |
-        forever node_modules/http-server/bin/http-server .
+        forever start node_modules/http-server/bin/http-server .
         sleep 5
     - run: cd ../../../tests/selenide
     - name: Set up JDK 11
